@@ -24,7 +24,7 @@ var mailerController = {
             html: `
             <h1>Portfolio Message from ${req.body.email}</h1>
             <h4>Name: ${req.body.name}</h4>
-            <h4>Contact phone${req.body.phone}</h4>
+            <h4>Contact phone: ${req.body.phone}</h4>
             <h2>Portfolio Message</h2>
             <b>${req.body.message}</b>
             `, // html body
