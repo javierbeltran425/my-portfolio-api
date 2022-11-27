@@ -21,7 +21,13 @@ var mailerController = {
             from: `${process.env.NODEM_USER}`, // sender address
             to: `${req.body.sendemail}`, // list of receivers
             subject: "Portfolio Message", // Subject line
-            html: `<b>${req.body.message}</b>`, // html body
+            html: `
+            <h1>Portfolio Message from ${req.body.email}</h1>
+            <h4>Name: ${req.body.name}</h4>
+            <h4>Contact phone${req.body.phone}</h4>
+            <h2>Portfolio Message</h2>
+            <b>${req.body.message}</b>
+            `, // html body
         });
 
         res.send(info)
